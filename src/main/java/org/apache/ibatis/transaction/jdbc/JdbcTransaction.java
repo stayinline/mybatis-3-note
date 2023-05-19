@@ -147,5 +147,5 @@ public class JdbcTransaction implements Transaction {
   public Integer getTimeout() throws SQLException {
     return null;
   }
-  
+
 }

@@ -214,5 +214,5 @@ public class BatchKeysTest {
       sqlSession.close();
     }
   }
-  
+
 }

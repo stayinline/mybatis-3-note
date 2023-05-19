@@ -135,9 +135,9 @@ public interface BoundBlogMapper {
   Blog selectBlogUsingConstructorWithResultMap(int i);
 
   Blog selectBlogUsingConstructorWithResultMapAndProperties(int i);
-  
+
   Blog selectBlogUsingConstructorWithResultMapCollection(int i);
-  
+
   Blog selectBlogByIdUsingConstructor(int id);
 
   //======================================================
@@ -196,13 +196,13 @@ public interface BoundBlogMapper {
   Blog selectBlogWithAParamNamedValue(@Param("column") String column, @Param("id") int id, @Param("value") String title);
 
   //======================================================
-  
+
   @Select({
       "SELECT *",
       "FROM blog"
   })
-  @Results({ 
-      @Result(property = "author", column = "author_id", one = @One(select = "org.apache.ibatis.binding.BoundAuthorMapper.selectAuthor")), 
+  @Results({
+      @Result(property = "author", column = "author_id", one = @One(select = "org.apache.ibatis.binding.BoundAuthorMapper.selectAuthor")),
       @Result(property = "posts", column = "id", many = @Many(select = "selectPostsById"))
   })
   List<Blog> selectBlogsWithAutorAndPosts();
@@ -211,10 +211,10 @@ public interface BoundBlogMapper {
       "SELECT *",
       "FROM blog"
   })
-  @Results({ 
-      @Result(property = "author", column = "author_id", one = @One(select = "org.apache.ibatis.binding.BoundAuthorMapper.selectAuthor", fetchType=FetchType.EAGER)), 
+  @Results({
+      @Result(property = "author", column = "author_id", one = @One(select = "org.apache.ibatis.binding.BoundAuthorMapper.selectAuthor", fetchType=FetchType.EAGER)),
       @Result(property = "posts", column = "id", many = @Many(select = "selectPostsById", fetchType=FetchType.EAGER))
   })
   List<Blog> selectBlogsWithAutorAndPostsEagerly();
- 
+
 }

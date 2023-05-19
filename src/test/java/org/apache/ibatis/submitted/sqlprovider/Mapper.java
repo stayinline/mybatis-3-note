@@ -31,7 +31,7 @@ public interface Mapper extends BaseMapper<User> {
 
   @SelectProvider(type = OurSqlBuilder.class, method = "buildGetUserQuery")
   User getUser(Integer userId);
- 
+
   @SelectProvider(type = OurSqlBuilder.class, method = "buildGetAllUsersQuery")
   List<User> getAllUsers();
 

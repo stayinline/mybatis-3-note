@@ -28,7 +28,7 @@ import java.lang.annotation.Target;
 
 /**
  * Marker interface for MyBatis mappers
- * 
+ *
  * @author Frank David Martínez
  */
 @Documented

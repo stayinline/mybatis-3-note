@@ -62,7 +62,7 @@ public class CacheTest {
   }
 
   /*
-   * Test Plan: 
+   * Test Plan:
    *  1) SqlSession 1 executes "select * from A".
    *  2) SqlSession 1 closes.
    *  3) SqlSession 2 executes "delete from A where id = 1"
@@ -93,7 +93,7 @@ public class CacheTest {
   }
 
   /*
-   * Test Plan: 
+   * Test Plan:
    *  1) SqlSession 1 executes "select * from A".
    *  2) SqlSession 1 closes.
    *  3) SqlSession 2 executes "delete from A where id = 1"
@@ -102,7 +102,7 @@ public class CacheTest {
    *  6) SqlSession 3 executes "select * from A"
    *
    * Assert:
-   *   Step 6 returns 2 rows. 
+   *   Step 6 returns 2 rows.
    */
   @Test
   public void testplan2() {
@@ -142,7 +142,7 @@ public class CacheTest {
    *  6) SqlSession 3 closes.
    *
    * Assert:
-   *   Step 6 returns 1 row. 
+   *   Step 6 returns 1 row.
    */
   @Test
   public void testplan3() {

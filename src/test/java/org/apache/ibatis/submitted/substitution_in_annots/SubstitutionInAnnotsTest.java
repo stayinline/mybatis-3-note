@@ -81,7 +81,7 @@ public class SubstitutionInAnnotsTest {
       sqlSession.close();
     }
   }
-  
+
   @Test
   public void testSubstitutionWithAnnotsParameter() {
     SqlSession sqlSession = sqlSessionFactory.openSession();

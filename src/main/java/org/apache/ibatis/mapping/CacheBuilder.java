@@ -83,7 +83,7 @@ public class CacheBuilder {
     this.blocking = blocking;
     return this;
   }
-  
+
   public CacheBuilder properties(Properties properties) {
     this.properties = properties;
     return this;

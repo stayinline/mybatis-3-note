@@ -29,9 +29,9 @@ import java.sql.Connection;
 import java.sql.DriverManager;
 
 public class ComplexColumnTest {
-    
+
     private static SqlSessionFactory sqlSessionFactory;
-    
+
     @BeforeClass
     public static void initDatabase() throws Exception {
         Connection conn = null;
@@ -59,7 +59,7 @@ public class ComplexColumnTest {
             }
         }
     }
-    
+
     @Test
     public void testWithoutComplex() {
         SqlSession sqlSession = sqlSessionFactory.openSession();
@@ -74,7 +74,7 @@ public class ComplexColumnTest {
         Assert.assertEquals("Smith", parent.getLastName());
       sqlSession.close();
     }
-    
+
     @Test
     public void testWithComplex() {
         SqlSession sqlSession = sqlSessionFactory.openSession();
